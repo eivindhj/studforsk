@@ -1,0 +1,92 @@
+\ProvidesPackage{ottostyle}
+
+%\RequirePackage[margin=1in]{geometry}  % set the margins to 1in on all sides
+\RequirePackage{graphicx}              % to include figures
+\RequirePackage{amsmath}               % great math stuff
+\RequirePackage{amsfonts}              % for blackboard bold, etc
+\RequirePackage{amsthm}                % better theorem environments
+\RequirePackage{amssymb}
+\RequirePackage{enumitem}
+\RequirePackage[a4paper]{geometry}
+\RequirePackage{mathptmx}
+\RequirePackage[scaled=.90]{helvet}
+\RequirePackage[all]{xy}
+\RequirePackage{color}
+\RequirePackage{epigraph}
+\RequirePackage[norsk]{babel}
+\RequirePackage[utf8]{inputenc}
+
+%Bibliography
+\RequirePackage[
+	backend=biber,
+	style=alphabetic]{biblatex}
+
+% linebreak penalties
+\relpenalty=9999
+\binoppenalty=9999
+
+%index
+\RequirePackage{imakeidx}
+\makeindex
+
+%Todo list
+\RequirePackage{comment}
+\specialcomment{todo}{\begingroup \color{red}}{\endgroup}
+%\excludecomment{todo}
+
+
+\parindent0pt 
+\parskip10pt
+
+% various theorems, numbered by section
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exmps}[theorem]{Examples}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}[theorem]{Observation}
+
+% custom commands and operators
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\eval}{eval}
+\DeclareMathOperator*{\colim}{colim}
+\DeclareMathOperator{\free}{free}
+\DeclareMathOperator{\forget}{forget}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\fl}{fl}
+\DeclareMathOperator{\ev}{ev}
+
+\newcommand{\bd}[1]{\mathbf{#1}}  % for bolding symbols
+\newcommand{\RR}{\mathbb{R}}      % for Real numbers
+\newcommand{\ZZ}{\mathbb{Z}}      % for Integers
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\col}[1]{\left[\begin{matrix} #1 \end{matrix} \right]}
+\newcommand{\comb}[2]{\binom{#1^2 + #2^2}{#1+#2}}
+\newcommand{\Top}{\cat{Top} }
+\newcommand{\CG}{\texttt{CG}}
+\newcommand{\cat}[1]{{\normalfont\textbf{#1}}}
+\newcommand{\Set}{\cat{Set}}
+\newcommand{\Quiv}{\texttt{Quiv}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Cop}{C}
+\newcommand{\smallcat}{\mathcal{C}}
+\newcommand{\Fun}{\operatorname{Fun}}
+\newcommand{\Mod}{\operatorname{Mod}}
+\newcommand{\module}{\operatorname{mod}}
+\newcommand{\Rep}[2]{\operatorname{Rep}_{#1} #2}
+\newcommand{\findim}{\operatorname{f.d.}}
+\newcommand{\art}{\operatorname{art}}
+\newcommand{\noeth}{\operatorname{noeth}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\mm}{\underline{m}}
+\newcommand{\rr}{\underline{r}}
+\newcommand{\Ann}[2]{\operatorname{Ann}_{#1} {#2}}
+\newcommand{\aaa}{\underline{a}}

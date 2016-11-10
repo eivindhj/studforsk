@@ -1,0 +1,43 @@
+% Preamble
+\documentclass[12pt]{amsart}
+\usepackage{ottostyle}
+
+\sloppypar
+
+% Bibliography
+\addbibresource{references.bib}
+\begin{document}
+
+
+\section{Argument}
+We will now describe how to construct \( \operatorname{soc}D \Gamma \) given \( \underline{r} \Gamma \), and the other way around.
+
+Suppose that we know \( \underline{r}\Gamma \).
+Then we also know \( \operatorname{Top} \Gamma \), and we have a canonical projection
+\[
+\xymatrix{
+	\Gamma \ar[r]^p & \operatorname{Top} \Gamma .
+}
+\]
+Applying \( D \) we get a map
+\[
+\xymatrix{
+	D \operatorname{Top} \Gamma \ar[r]^{p^*} & D \Gamma ,
+}
+\]
+and \( \im p^* = \operatorname{Soc} D \Gamma \) \textcolor{red}{reference} .
+
+Conversely, suppose that we know \( \operatorname{Soc} D \Gamma \).
+This is a simple right \( \Gamma \)-module \textcolor{red}{reference} .
+So if \( f \in \operatorname{Soc} D \Gamma \) is any non-zero element, we obtain a short exact sequence of right \( \Gamma \)-modules
+\[
+\xymatrix{
+	0 \ar[r] & M \ar[r] & \Gamma \ar[r]^{\phi} & \operatorname{Soc} D \Gamma \ar[r] & 0 ,
+}
+\]
+where \( \phi (a) = f \cdot a \) and \( M = \ker \phi \).
+Since \( \operatorname{Soc} D \Gamma \) is simple, \( M \) is a maximal right ideal.
+But \( \Gamma \) has only one right maximal ideal \textcolor{red}{why} , so \( M = \underline{r} \Gamma \).
+
+
+\end{document}
